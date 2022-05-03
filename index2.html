@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="./javascript2.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./myChart.js"></script>    
+
+</head>
+<body>
+
+</body>
+
+
+</html>
+<script>
+function apicallValue(){
+        APIkey = 'a68ed55e85msh4309fb562707623p146e3djsn38cf8360e9ed';
+       
+    
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            url: `https://animes3.p.rapidapi.com/`,
+            async: false,
+            crossDomain: true,
+
+
+            complete: function (response) {
+                if (response.readyState === 4 && response.status === 200) {
+                    console.log(response);
+                    // title = response.responseJSON.title;
+                    // name = response.responseJSON.name;
+                    // console.log(title);
+                    // console.log(name);
+                    // document.getElementById('title').textContent = title;
+                    // document.getElementById('name').textContent = name;
+                }
+                
+            }
+        })
+    } 
+
+
+
+// const settings = {
+// 	"async": true,
+// 	"crossDomain": true,
+// 	"url": "https://animes3.p.rapidapi.com/",
+// 	"method": "GET",
+// 	"headers": {
+// 		"X-RapidAPI-Host": "animes3.p.rapidapi.com",
+// 		"X-RapidAPI-Key": "a68ed55e85msh4309fb562707623p146e3djsn38cf8360e9ed"
+// 	}
+// };
+
+// $.ajax(settings).done(function (response) {
+//     if (response.readyState === 4 && response.status === 200) {
+//         console.log(response);
+//     }
+//     // title = response.responseJSON.array[0].title;
+//     // name = response.responseJSON.name;
+//     // console.log(title);
+//     // console.log(name);
+//     // document.getElementById('title').textContent = title;
+//     // document.getElementById('name').textContent = name;
+// });
+// const settings = {
+// 	"async": true,
+// 	"crossDomain": true,
+// 	"url": "https://animes3.p.rapidapi.com/romance",
+// 	"method": "GET",
+// 	"headers": {
+// 		"X-RapidAPI-Host": "animes3.p.rapidapi.com",
+// 		"X-RapidAPI-Key": "a68ed55e85msh4309fb562707623p146e3djsn38cf8360e9ed"
+// 	}
+// };
+
+// $.ajax(settings).done(function (response) {
+// 	console.log(response);
+// });
+// </script>
+
